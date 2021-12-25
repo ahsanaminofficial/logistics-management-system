@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My HTML page</title>
+    <link rel="stylesheet" href={% static 'css/style2.css' %}>
+  </head>
+
+  <body>
+    <h1>Logistics Management System</h1>
+    <p>Select which user type best describes you</p>
+
+    <a href="client">
+      <button>Client</button>
+    </a>
+
+    <a href="seller">
+      <button>Seller</button>
+    </a>
+
+    <a href="warehouse">
+      <button>Warehouse</button>
+    </a>
+
+    <a href="rider">
+      <button>Rider</button>
+    </a>
+
+    <!-- <button
+      onclick="window.location.href='https://www.google.com/search?q=button&source=lnms&tbm=isch&sa=X&ved=2ahUKEwinlLr-rsn0AhXBy6QKHd5HBocQ_AUoAXoECAMQAw&biw=1280&bih=688&dpr=2'">Company
+
+   </button> -->
+  </body>
+</html>

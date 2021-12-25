@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Seller Track Packages</title>
+    <link rel="stylesheet" type="text/css" href={% static 'css/style2.css' %}>
+  </head>
+
+  <body>
+    <h1>Logistics Management System</h1>
+    <h2>Rider</h2>
+    <h3>Finances</h3>
+    <br />
+    <p>
+      Please enter the tracking ID of the package you have delivered and
+      received payment for
+    </p>
+    <form method="POST">
+      {% csrf_token %}
+      <label><b>ID</b></label>
+      <input type="text" name="productid" id="ID" placeholder="Tracking ID" />
+      <input type="submit" placeholder="Mark as Delivered!" />
+    </form>
+    <br />
+
+    <br /><br />
+    <div>The data for your current order is given below!</div>
+
+    <table>
+      <tr>
+        <th>Tracking ID</th>
+        <th>Current Location</th>
+        <th>Product Route</th>
+        <th>Payment Status</th>
+        <th>Price</th>
+      </tr>
+
+      <div>
+        <tr>
+          <td>{{productData.trackingID}}</td>
+          <td>{{productData.currentLocation}}</td>
+          <td>{{productData.productRoute}}</td>
+          <td>{{productData.paymentStatus}}</td>
+          <td>{{productData.price}}</td>
+        </tr>
+      </div>
+    </table>
+    <br /><br />
+    <a href="/rider/home">
+      <button>Return to previous page</button>
+    </a>
+  </body>
+</html>

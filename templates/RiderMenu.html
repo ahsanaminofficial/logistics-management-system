@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>My HTML page</title>
+      <link rel="stylesheet" href={% static 'css/style2.css' %}>
+   </head>
+   <body>
+      <h1>Logistics Management System</h1>
+      <h2>Rider</h2>
+      <p> Welcome! Thank you for delivering for us! Select which feature you’d want to use
+      </p>
+      
+   
+   <a href = 'client_info'>    <!--relevant page: 'RiderObtainClientInfo.html'-->
+    <button>Obtain Client Information </button>
+</a>
+</button>
+
+
+
+<a href = 'seller_info'>    <!--relevant page: 'RiderObtainSellerInfo.html'-->
+ <button>
+   Obtain Seller Information
+</button>
+</a>
+
+<a href = 'prod_det'>    <!--relevant page: 'RiderProductDets.html'-->
+ <button>
+   Access Product Details
+</button>
+</a>
+
+<a href = 'finances'>   <!--relevant page: 'RiderFinances.html'-->
+    <button>
+      Mark Completed Delivery!
+   </button>
+   </a>
+      
+   </body>
+</html>

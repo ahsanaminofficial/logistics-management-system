@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <meta charset="utf-8">
+    <title>Seller Track Packages</title>    
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css">  --> 
+    <link rel="stylesheet" type="text/css" href={% static 'css/style2.css' %}>
+</head>    
+<body>    
+    <h1>Logistics Management System</h1>
+    <h2>Warehouse</h2>
+    <h3>Ship to Another Warehouse</h3><br>      
+       <p>Please enter the tracking ID of the product and the warehouse where you want to ship the product to.</p>
+       <form method='post'>
+           {% csrf_token %}
+        <label><b>ID</b></label>    
+        <input type="text" name="id" id="id" placeholder="id">  <br>
+        <label><b>Warehouse</b></label>    
+        <input type="text" name="warehouse" id="warehouse" placeholder="warehouse">  <br>
+        <input type="Submit"> 
+        </form>
+        <h4>Products:</h4>
+        {% for i in data %}
+        <div> {{ i.trackingID }} <br>
+        {% endfor %} 
+        <br>   
+     
+  
+</body>    
+</html> 

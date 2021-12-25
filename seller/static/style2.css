@@ -1,0 +1,34 @@
+
+h1,h2,h3,h4,h5, label, span{
+	color: #ffffff;
+	font-family: 'Verdana';font-size: 25px;
+}
+
+
+body{
+	background-color: black;
+}
+p{
+	color: #ffffff;
+	font-family: 'Verdana';font-size: 22px;
+}
+button {
+  display:block;
+  height: 70px;
+  width: 200px;
+  border-radius: 45%;
+  /*margin-left: 50px*/
+  text-align: center;
+  display: inline-block;
+  font-family: 'Verdana';font-size: 15px;
+
+ /* border: 1px solid red;*/
+  
+}
+button:hover {
+  background-color: red; /* Green */
+  color: white;
+}
+
+
+

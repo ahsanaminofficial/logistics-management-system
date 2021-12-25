@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Login Form</title>
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css">  -->
+    <link rel="stylesheet" type="text/css" href= {% static 'css/style2.css' %}
+    />
+  </head>
+  <body>
+    <h1>Logistics Management System</h1>
+    <h2>Seller</h2>
+    <h3>Login Page</h3>
+    <br />
+
+    <form action="" , method="post">
+      {% csrf_token %}
+      <input type="text" name="username" placeholder="username" /> <br />
+      <input type="password" name="password" placeholder="password" /> <br />
+      <input type="Submit" />
+    </form>
+
+    <br /><br />
+  </body>
+</html>

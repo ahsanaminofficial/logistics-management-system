@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My HTML page</title>
+    <link rel="stylesheet" href={% static 'css/style2.css' %}>
+  </head>
+  <body>
+    <h1>Logistics Management System</h1>
+    <h2>Seller</h2>
+    <h3>Updates On Orders</h3>
+    <h4>Result</h4>
+
+    {% for i in data %}
+    <div>
+      {{ i.trackingID }} - {{ i.warehouseID }} - {{ i.currentLocation }}- {{
+      i.productRoute }} - {{ i.paymentStatus }} - {{ i.price }}
+    </div>
+    {% endfor %}
+  </body>
+</html>

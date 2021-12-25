@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Inventory</title>
+    <link rel="stylesheet" href={% static 'css/style2.css' %}>
+  </head>
+  <body>
+    <h1>Logistics Management System</h1>
+    <h2>Warehouse</h2>
+    <h3>Products in Stock</h3>
+
+    {% for i in data %}
+    <div>
+      Tracking ID: {{ i.trackingID }} <br />
+      Product Route: {{ i.productRoute }} <br />
+      Paid: {{ i.paymentStatus }} <br />
+      Price: {{ i.price }}
+    </div>
+    <br />
+    {% endfor %}
+    <br />
+  </body>
+</html>

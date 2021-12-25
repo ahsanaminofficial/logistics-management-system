@@ -1,0 +1,15 @@
+Please run these scripts in your database in the following order:
+
+setup.sql
+createTables.sql
+alterTables.sql
+Seller.sql
+Client.sql
+Warehouse.sql
+Product.sql
+Rider.sql
+Login.sql
+
+setup sets up DB with user
+createTables will set up tables
+alterTables will add foreign key relations to the existing table

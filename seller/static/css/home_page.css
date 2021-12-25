@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right top, white, grey);
+}
+form {
+    width: 500px;
+    height: 580px;
+    padding: 75px 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 45px;
+    color: black;
+    font-size: 40px;
+}
+p{
+    text-align: center;
+    margin-bottom: 45px;
+    color: black;
+    font-size: 30px;
+}
+.logo{
+    width: 200px;
+    cursor: pointer;
+
+}
+.btn{
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    background: white;
+    height: 50px;
+    width: 120px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    text-decoration: none;
+}
+.btn:hover{
+    background-position: right;
+    font-size: 17px;
+}
+
+
+

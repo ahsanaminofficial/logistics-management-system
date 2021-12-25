@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Seller Track Packages</title>
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css">  -->
+    <link rel="stylesheet" type="text/css" href={% static 'css/style2.css' %}>
+  </head>
+  <body>
+    <h1>Logistics Management System</h1>
+    <h2>Seller</h2>
+    <h3>Track Packages</h3>
+    <br />
+    <h3>Rider Information</h3>
+    <p>Please enter the ID of the rider you want to know about</p>
+    <label><b>ID</b></label>
+    <input type="text" name="ID" id="ID" placeholder="Tracking ID" />
+    <br />
+
+    <!--  <input type="button" name="log" id="log" value="Log In Here"> -->
+
+    <a href="SellerTrackRiderInfoResult.html">
+      <button>Search</button>
+    </a>
+  </body>
+</html>

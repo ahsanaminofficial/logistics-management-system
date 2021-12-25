@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My HTML page</title>
+    <link rel="stylesheet" href={% static 'css/style2.css' %}>
+  </head>
+
+  <body>
+    <h1>Logistics Management System</h1>
+    <h2>Rider</h2>
+    <h3>Obtain Client Information</h3>
+    <h4>Result</h4>
+    <div>The data for your current order is given below!</div>
+
+    <table>
+      <tr>
+        <th>Client Phone Number</th>
+        <th>Client Address</th>
+        <th>City</th>
+      </tr>
+
+      <div>
+        <tr>
+          <td>{{clientData.phoneNumber}}</td>
+          <td>{{clientData.clientAddress}}</td>
+          <td>{{clientData.city}}</td>
+        </tr>
+      </div>
+    </table>
+
+    <a href="/rider/client_info">
+      <button>Return to previous page</button>
+    </a>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Seller Track Packages</title>
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css">  -->
+    <link rel="stylesheet" type="text/css" href={% static 'css/style2.css' %}>
+  </head>
+  <body>
+    <h1>Logistics Management System</h1>
+    <h2>Seller</h2>
+    <h3>Obtain Client Information</h3>
+    <br />
+    <p>Please enter the tracking ID of the client you want to know about</p>
+    <form method="POST">
+      {% csrf_token %}
+      <label><b>ID</b></label>
+      <input type="text" name="trackingid" id="ID" placeholder="Tracking ID" />
+      <br />
+      <input type="Submit" />
+    </form>
+    <br />
+    <!--  <input type="button" name="log" id="log" value="Log In Here"> -->
+  </body>
+</html>

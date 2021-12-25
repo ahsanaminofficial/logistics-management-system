@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Seller Track Packages</title>
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css">  -->
+    <link rel="stylesheet" type="text/css" href={% static 'css/style2.css' %}>
+  </head>
+
+  <body>
+    <h1>Logistics Management System</h1>
+    <h2>Rider</h2>
+    <h3>Obtain Client Information</h3>
+    <p>
+      Please enter the tracking ID of the package whose client you want to know
+      about
+    </p>
+    <label><b>ID</b></label>
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" name="ID" id="ID" placeholder="Tracking ID" />
+      <br />
+      <input type="submit" name="log" id="log" value="Submit" />
+      <br />
+    </form>
+
+    <br /><br />
+    <div>The data for your current order is given below!</div>
+
+    <table>
+      <tr>
+        <th>Tracking ID</th>
+        <th>Current Location</th>
+        <th>Product Route</th>
+        <th>Payment Status</th>
+        <th>Price</th>
+      </tr>
+
+      <div>
+        <tr>
+          <td>{{productData.trackingID}}</td>
+          <td>{{productData.currentLocation}}</td>
+          <td>{{productData.productRoute}}</td>
+          <td>{{productData.paymentStatus}}</td>
+          <td>{{productData.price}}</td>
+        </tr>
+      </div>
+    </table>
+    <!--  <input type="button" name="log" id="log" value="Log In Here"> -->
+
+    <a href="/rider/home">
+      <button>Return to previous page</button>
+    </a>
+  </body>
+</html>

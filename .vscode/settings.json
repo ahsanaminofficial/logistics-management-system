@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/55a46934-5bff-488f-82bf-7e8f212f6fbc/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/logi-mgmt",
+  "appService.deploySubpath": "."
+}

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Seller Track Packages</title>
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css">  -->
+    <link rel="stylesheet" type="text/css" href={% static 'css/style2.css' %}>
+  </head>
+  <body>
+    <h1>Logistics Management System</h1>
+    <h2>Warehouse</h2>
+    <h3>Deliver to Client!</h3>
+    <br />
+    <p>
+      Please enter the tracking ID of the package you want to deliver and the
+      Rider ID for the rider delivering the package.
+    </p>
+    <form method="post">
+      {% csrf_token %}
+      <label><b>TrackingID</b></label>
+      <input type="text" name="id" id="id" placeholder="id" /> <br />
+      <label><b>RiderID</b></label>
+      <input type="text" name="rider" id="rider" placeholder="rider" /> <br />
+      <input type="Submit" />
+    </form>
+    <h4>Available Riders:</h4>
+    {% for i in r %}
+    <div>
+      ID: {{ i.riderID }} <br />
+      Name: {{ i.riderName }}
+    </div>
+    {% endfor %}
+    <h5>Products to be Delivered:</h5>
+    {% for i in p %}
+    <div>ID: {{ i.trackingID }}</div>
+    {% endfor %}
+    <br />
+  </body>
+</html>

@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My HTML page</title>
+    <link rel="stylesheet" href={% static 'css/style2.css' %}>
+  </head>
+
+  <body>
+    <h1>Logistics Management System</h1>
+    <h2>Client</h2>
+    <h3>Track Packages</h3>
+    <h4>Rider Information</h4>
+    <h5>Result</h5>
+
+    {% if success %}
+    <table>
+      <tr>
+        <th>Rider Name</th>
+        <th>Rider Phone Number</th>
+      </tr>
+
+      <div>
+        <tr>
+          <td>{{data.riderName}}</td>
+          <td>{{data.phoneNumber}}</td>
+        </tr>
+      </div>
+
+      <div>
+        Your order has been handed over to one of our riders! Their contact
+        information is shown below. Please have the shown amount ready at
+        reception for payment.
+      </div>
+    </table>
+    {% else %}
+    <div>
+      The tracking ID you have entered has not been handed over to any Rider
+      yet. Please check its status or enter a different tracking ID!
+    </div>
+
+    <div>
+      {% endif %}
+      <a href="">
+        <button>Return to Search Options</button>
+      </a>
+    </div>
+  </body>
+</html>

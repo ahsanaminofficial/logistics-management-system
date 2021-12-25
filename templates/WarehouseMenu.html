@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>My HTML page</title>
+      <link rel="stylesheet" href={% static 'css/style2.css' %}>
+   </head>
+   <body>
+      <h1>Logistics Management System</h1>
+      <h2>Warehouse</h2>
+      <p> Welcome! Please manage your inventory here! Select which feature you’d want to use
+      </p>
+      
+   
+   <a href = 'ship'>
+    <button>Ship to Another Warehouse </button>
+   </a>
+   </button>
+
+   <a href = 'inventory'>
+   <button>
+      Display Inventory
+   </button>
+   </a>
+
+   <a href = 'deliver'>
+      <button>Dispatch Rider </button>
+     </a>
+   </button>
+
+   <a href = 'add'>
+      <button>Add Product </button>
+     </a>
+   </button>
+      
+   </body>
+</html>
