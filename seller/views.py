@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.db import connection
 from django.contrib import messages
-
+import hashlib
 
 # from django.views.decorators.csrf import requires_csrf_token
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
@@ -38,6 +38,8 @@ def login(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
+        password = hashlib.sha256(password.encode())
+        password = password.hexdigest()
         # username = 'sellerID'
 
         logged_in = authenticate(username, password)

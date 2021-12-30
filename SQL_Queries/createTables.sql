@@ -20,7 +20,7 @@ DESCRIBE ClientProduct;
 DROP TABLE IF EXISTS LoginInfo;
 CREATE TABLE LoginInfo (ID char(10),
                         userName char(10),
-                        userPassword char(20),     
+                        userPassword char(64),     
                         CONSTRAINT uniqueness UNIQUE (userName),
                         CONSTRAINT primary_login PRIMARY KEY (ID));
 DESCRIBE LoginInfo;

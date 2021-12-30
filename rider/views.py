@@ -15,6 +15,8 @@ def login(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
+        password = hashlib.sha256(password.encode())
+        password = password.hexdigest()
 
         logged_in = authenticate(username, password)
 
