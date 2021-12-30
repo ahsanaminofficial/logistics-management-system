@@ -94,7 +94,7 @@ DATABASES = {
         'NAME': 'Logi_database',
         'USER':'DBproj',
         'PASSWORD': 'Ahsan@13', 
-        'HOST':"finaldb.mysql.database.azure.com",
+        'HOST':"lms.mysql.database.azure.com",
         'PORT': "",
     }
 }
